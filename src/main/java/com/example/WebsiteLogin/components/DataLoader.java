@@ -30,13 +30,13 @@ public class DataLoader implements ApplicationRunner {
     }
 
     public void run(ApplicationArguments args){
-        Files employee = new File("New User");
+        File employee = new File("New User");
         filesRepository.save(employee);
 
-        Folders project = new Folders("New Project");
-        foldersRepository.save(employee);
+        Folders project = new Folders("New Project", "File List", "User List");
+        foldersRepository.save(project);
 
-        Users JSmith = new Users("John Smith");
-        usersRepository.save(employee);
+        Users JSmith = new Users("John Smith", "List of Folders");
+        usersRepository.save(users);
     }
 }

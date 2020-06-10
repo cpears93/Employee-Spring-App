@@ -40,7 +40,7 @@ public class Files implements Serializable {
     )
     private List<Folders> folders;
 
-    public Files(String project, String java, String size, String folder) {
+    public Files(String project) {
         this.project = project;
         this.java = java;
         this.size = size;

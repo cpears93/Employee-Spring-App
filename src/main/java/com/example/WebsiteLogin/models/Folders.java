@@ -16,8 +16,8 @@ public class Folders implements Serializable {
     @Column(name = "q1")
     private String q1;
 
-    @Column(name = "list_of_files")
-    private String listOfFiles;
+    @Column(name = "file_list")
+    private String fileList;
 
     @Column(name = "user_list")
     private String userList;
@@ -41,7 +41,7 @@ public class Folders implements Serializable {
 
     public Folders(String q1, String listOfFiles, String userList) {
         this.q1 = q1;
-        this.listOfFiles = listOfFiles;
+        this.fileList = fileList;
         this.userList = userList;
     }
 
@@ -50,7 +50,7 @@ public class Folders implements Serializable {
     }
 
     public String getListOfFiles() {
-        return listOfFiles;
+        return fileList;
     }
 
     public String getUserList() {
@@ -62,10 +62,13 @@ public class Folders implements Serializable {
     }
 
     public void setListOfFiles(String listOfFiles) {
-        this.listOfFiles = listOfFiles;
+        this.fileList = fileList;
     }
 
     public void setUserList(String userList) {
         this.userList = userList;
+    }
+
+    public void addUsers(Users john) {
     }
 }

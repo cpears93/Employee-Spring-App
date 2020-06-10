@@ -52,4 +52,7 @@ public class Users {
     public void setFolderList(String folderList) {
         this.folderList = folderList;
     }
+
+    public void addFolder(Folders folders) {
+    }
 }

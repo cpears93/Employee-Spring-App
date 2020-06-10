@@ -1,5 +1,6 @@
 package com.example.WebsiteLogin;
 
+import com.example.WebsiteLogin.models.Files;
 import com.example.WebsiteLogin.models.Folders;
 import com.example.WebsiteLogin.models.Users;
 import com.example.WebsiteLogin.repository.FilesRepository;
@@ -30,16 +31,16 @@ class WebsiteLoginApplicationTests {
 
 	@Test
 	public void createFileAndUserThenSave(){
-		File project = new File("Project");
+		Files project = new Files("Project");
 		filesRepository.save(project);
-		User john = new Users("John Smith");
+		Users john = new Users("John Smith", "Tech");
 		usersRepository.save(john);
 
-		Folders folders - new Folders("Q1");
+		Folders folders = new Folders("Q1", "File List", "User List");
 		foldersRepository.save(folders);
 
 		john.addFolder(folders);
-		folder.addUser(john);
+		folders.addUsers(john);
 		foldersRepository.save(folders);
 
 	}
